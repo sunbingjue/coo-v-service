@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Movie {
-
+    //asfasdf
 	private String mTitle;
 
 	private int mPosterResId;
