@@ -1,0 +1,23 @@
+<com.idunnolol.moviesdemo.view.ViewPager
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MoviesActivity">
+
+    <com.idunnolol.moviesdemo.view.DecorFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.idunnolol.moviesdemo.view.SlidingListView
+            android:id="@+id/sliding_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:dividerHeight="0dp"/>
+
+    </com.idunnolol.moviesdemo.view.DecorFrameLayout>
+
+</com.idunnolol.moviesdemo.view.ViewPager>
+

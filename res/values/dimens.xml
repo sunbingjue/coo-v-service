@@ -1,0 +1,6 @@
+<resources>
+
+    <dimen name="cell_padding">16dp</dimen>
+    <dimen name="cell_padding_half">8dp</dimen>
+
+</resources>

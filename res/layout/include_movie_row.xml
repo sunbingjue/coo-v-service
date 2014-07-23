@@ -1,0 +1,176 @@
+<com.idunnolol.moviesdemo.view.MovieRowView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/slide_reveal_right"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/cell_padding"
+    android:paddingRight="@dimen/cell_padding">
+
+    <!-- The size of the cover when it shrinks -->
+
+    <Space
+        android:id="@+id/space_view"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"/>
+
+    <!-- The content of the slide -->
+
+    <RelativeLayout
+        android:id="@+id/content_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/space_view"
+        android:layout_alignParentRight="true"
+        android:padding="16dp"
+        android:background="#595658">
+
+        <TextView
+            android:id="@+id/content_title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="@android:color/white"/>
+
+        <!-- Shown for movie showtimes -->
+        <LinearLayout
+            android:id="@+id/showtimes_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/content_title_view"
+            android:layout_above="@+id/film_rating_text_view"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/showtimes_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <!-- Shown for upcoming movies-->
+        <LinearLayout
+            android:id="@+id/upcoming_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/content_title_view"
+            android:layout_above="@+id/film_rating_text_view"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/upcoming_date_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/upcoming_days_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <RatingBar
+            android:id="@+id/rating_bar"
+            style="@style/movieRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="4dp"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="3"
+            android:stepSize=".5"/>
+
+        <TextView
+            android:id="@+id/film_rating_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:textSize="14dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_film_rating"/>
+
+    </RelativeLayout>
+
+    <!-- The cover of the slide -->
+
+    <com.idunnolol.moviesdemo.view.CenteringRelativeLayout
+        android:id="@+id/cover_container"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/poster_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/subtitle_view"
+            android:background="#A000"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:textSize="16dp"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/subtitle_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#A000"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            android:textColor="@color/grayText"
+            android:text="TEST"/>
+    </com.idunnolol.moviesdemo.view.CenteringRelativeLayout>
+
+    <!-- These views fake the rounded corners/drop shadow -->
+
+    <View
+        android:id="@+id/slide_overlay_middle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/card_overlay_middle"/>
+
+    <View
+        android:id="@+id/slide_overlay_left"
+        android:layout_width="12dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/card_overlay_left"/>
+
+    <View
+        android:id="@+id/slide_overlay_right"
+        android:layout_width="12dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/card_overlay_right"/>
+
+</com.idunnolol.moviesdemo.view.MovieRowView>

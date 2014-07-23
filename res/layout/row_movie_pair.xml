@@ -1,0 +1,25 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MoviesActivity"
+    android:paddingTop="@dimen/cell_padding_half"
+    android:paddingBottom="@dimen/cell_padding_half">
+
+    <com.idunnolol.moviesdemo.view.SlidingPairView
+        android:id="@+id/sliding_pair"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/slide_reveal_right"
+            layout="@layout/include_movie_row" />
+
+        <include
+            android:id="@+id/slide_reveal_left"
+            layout="@layout/include_movie_row" />
+
+    </com.idunnolol.moviesdemo.view.SlidingPairView>
+
+</FrameLayout>
